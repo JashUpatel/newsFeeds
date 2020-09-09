@@ -33,7 +33,7 @@ class News extends Component{
             // no need to do it manually like fetch
         })
         .then((data)=>{
-            console.log("data",data);
+            // console.log("data",data);
 
             this.setState({
                 isLoading:false,
