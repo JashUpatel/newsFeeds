@@ -1,5 +1,11 @@
+/* *{ */
+  /* background-color: #f7f7f7; */
+/* } */
 body {
   margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +17,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pinkColor{
+  color:#ee6e73 !important;
+
+}
+
+.cardHead{
+  background-color: #ee6e73 !important;
+  color: #fff !important;
+}
+
+.white{
+  background-color: #fff;
+}
+.news{
+  margin: 2.5% 0;
+}
+.headerColor{
+  color: #fff !important;
+}
+
+.navLink:hover{
+
+  color:#fff;
+}
+
+.navText{
+  margin: 5% 0;
+}
+
+.footer{
+  margin-bottom: 0 !important;
+  height: 75px;
+}
+
+.footerFont{
+  font-size: 1.25em !important;
+  text-shadow: 1px 1px 3.5px #795548;
+
+
+}
+
+.active a h5{
+  /* border-bottom: 2px dashed #fff; */
+  text-shadow: 1px 1px 2px #795548;
+  font-weight: 700;
+  /* font-size: 1.35rem; */
+  margin-top: 2%;
+  text-decoration: underline;
+
+}
+
+.cent{
+  margin: 16.5% 0;
+}
+
+/* style={{backgroundColor:"#3a454e"}} */
+
+/* <a href="#" class="brand-logo"><i class="material-icons">class</i>NewsFeeds</a> */
