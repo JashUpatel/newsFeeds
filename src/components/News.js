@@ -24,7 +24,7 @@ class News extends Component{
 
     componentDidMount(){
         const url = this.props.url;
-        var proxyUrl ="https://newsfeeds-blogs.herokuapp.com/"
+        var proxyUrl ="https://vigorous-easley-e1c886.netlify.app/"
 
         fetch( proxyUrl+url)
         .then((response)=>{
