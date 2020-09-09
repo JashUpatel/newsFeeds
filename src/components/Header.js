@@ -17,7 +17,7 @@ function Header(){
             <ul class="nav justify-content-center text-center">
             <li class="nav-item">
              <NavLink activeClassName="active" to="/tech">
-              <a class="nav-link headerColor" href="#"><h5 className="navText">Tech</h5></a>
+              <a class="nav-link headerColor" href="#"><h5 className="navText">TechCrunch</h5></a>
               </NavLink>
             </li>
             <li class="nav-item">

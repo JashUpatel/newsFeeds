@@ -9,8 +9,8 @@ class News extends Component{
     constructor(props){
         super(props);
         this.state={
-            status:"",
-            total:'',
+            // status:"",
+            total:0,
             isLoading:true,
             news:[],
         }
@@ -33,12 +33,15 @@ class News extends Component{
             // no need to do it manually like fetch
         })
         .then((data)=>{
-            // console.log("data",data);
+            console.log("data",data);
+            // console.log("status",data.status);
+            // console.log("code",data.code);
+            console.log("total",data.articleCount);
 
             this.setState({
                 isLoading:false,
-                status: data.status,
-                total:data.totalResults,
+                // status: data.status,
+                total:data.articleCount,
                 news: data.articles
             })
             console.log("total",this.state.total);
@@ -61,7 +64,7 @@ class News extends Component{
            <Loading/>
             );
         }
-        if(this.state.status==='ok' && this.state.total>0 && this.state.news.length>0){
+        if(this.state.total>0 && this.state.news.length>0){
         return this.state.news.map((item)=>(
             // <div className="container">
             // <Loading/>
