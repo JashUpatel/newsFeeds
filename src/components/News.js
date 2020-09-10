@@ -37,7 +37,7 @@ class News extends Component{
             console.log("data",data);
             // console.log("status",data.status);
             // console.log("code",data.code);
-            console.log("total",data.articleCount);
+            console.log("total",data.count_results);
 
             this.setState({
                 isLoading:false,
@@ -65,7 +65,7 @@ class News extends Component{
            <Loading/>
             );
         }
-        if(this.state.total>0 && this.state.news.length>0){
+        if( this.state.news.length>0){
         return this.state.news.map((item)=>(
             // <div className="container">
             // <Loading/>

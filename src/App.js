@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 // token: c51cb0e8f9fb370b0748b171287f48d5
 // GET https://gnews.io/api/v3/topics/{topic}?token=API-Token
 
-// https://gnews.io/api/v2/?q=example&country=in&lang=en
+// https://gnews.io/api/v2/?q=example&country=in&lang=en&image=required
 
 
 // world	https://gnews.io/api/v3/topics/world
@@ -33,7 +33,7 @@ constructor(props){
     // bitcoin:"https://newsapi.org/v2/everything?q=bitcoin&from=2020-08-09&sortBy=publishedAt&apiKey=01ff551c8604416ca22e94875f6265f1",
     // busines:"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=01ff551c8604416ca22e94875f6265f1",
     // apple:"https://newsapi.org/v2/everything?q=apple&from=2020-09-07&to=2020-09-07&sortBy=popularity&apiKey=01ff551c8604416ca22e94875f6265f1",
-    tech:"https://gnews.io/api/v2/?q=example&token=c51cb0e8f9fb370b0748b171287f48d5",
+    tech:"https://gnews.io/api/v3/topics/technology?q=example&token=c51cb0e8f9fb370b0748b171287f48d5",
     // wallstreet:"https://newsapi.org/v2/everything?domains=wsj.com&apiKey=01ff551c8604416ca22e94875f6265f1"
 
   }
@@ -48,9 +48,9 @@ render() {
       <Header />
 
       <Switch>
-        {/* <Route exact path="/" component={()=>( 
+        <Route exact path="/" component={()=>( 
               <News url={this.state.tech} />
-          )} /> */}
+          )} />
           <Route path="/apple" component={()=>( 
               <News url={this.state.apple} />
           )} />
