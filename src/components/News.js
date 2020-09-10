@@ -25,8 +25,8 @@ class News extends Component{
     componentDidMount(){
         const url = this.props.url;
         var proxyUrl ="https://murmuring-tundra-59619.herokuapp.com/"
-
-        fetch( proxyUrl+url)
+            // var proxyUrl = "http://localhost:3000/";
+        fetch(proxyUrl+url)
         .then((response)=>{
             return response.json();
             // this is diff between using fetch and axios
@@ -35,14 +35,14 @@ class News extends Component{
         })
         .then((data)=>{
             console.log("data",data);
-            // console.log("status",data.status);
+            console.log("status",data.status);
             // console.log("code",data.code);
-            console.log("total",data.count_results);
+            // console.log("total",data.count_results);
 
             this.setState({
                 isLoading:false,
                 // status: data.status,
-                total:data.articleCount,
+                // total:data.articleCount,
                 news: data.articles
             })
             console.log("total",this.state.total);
@@ -65,7 +65,7 @@ class News extends Component{
            <Loading/>
             );
         }
-        if( this.state.news.length>0){
+        if(this.status='ok'){
         return this.state.news.map((item)=>(
             // <div className="container">
             // <Loading/>
