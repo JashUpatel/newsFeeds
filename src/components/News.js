@@ -24,9 +24,9 @@ class News extends Component{
 
     componentDidMount(){
         const url = this.props.url;
-        var proxyUrl ="https://murmuring-tundra-59619.herokuapp.com/"
+        // var proxyUrl ="https://murmuring-tundra-59619.herokuapp.com/"
             // var proxyUrl = "http://localhost:3000/";
-        fetch(proxyUrl+url)
+        fetch(url)
         .then((response)=>{
             return response.json();
             // this is diff between using fetch and axios

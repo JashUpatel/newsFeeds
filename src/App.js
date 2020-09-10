@@ -30,11 +30,13 @@ class App extends Component{
 constructor(props){
   super(props);
   this.state={
-    bitcoin:"https://newsapi.org/v2/top-headlines?country=us&apiKey=01ff551c8604416ca22e94875f6265f1",
-    busines:"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=01ff551c8604416ca22e94875f6265f1",
-    apple:"https://newsapi.org/v2/everything?q=apple&from=2020-09-07&to=2020-09-07&sortBy=popularity&apiKey=01ff551c8604416ca22e94875f6265f1",
+    bitcoin:"https://newsapi.org/v2/top-headlines?country=us&language=en&apiKey=01ff551c8604416ca22e94875f6265f1",
+    busines:"https://newsapi.org/v2/top-headlines?country=us&language=en&category=business&apiKey=01ff551c8604416ca22e94875f6265f1",
+    apple:"https://newsapi.org/v2/everything?q=apple&language=en&from=2020-09-07&to=2020-09-07&sortBy=popularity&apiKey=01ff551c8604416ca22e94875f6265f1",
     // tech:"https://gnews.io/api/v3/topics/technology?q=example&token=c51cb0e8f9fb370b0748b171287f48d5",
-    wallstreet:"https://newsapi.org/v2/everything?domains=wsj.com&apiKey=01ff551c8604416ca22e94875f6265f1"
+    tech:"https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&language=en&apiKey=01ff551c8604416ca22e94875f6265f1",
+
+    wallstreet:"https://newsapi.org/v2/everything?domains=wsj.com&language=en&apiKey=01ff551c8604416ca22e94875f6265f1"
 
   }
 
@@ -49,7 +51,7 @@ render() {
 
       <Switch>
         <Route exact path="/" component={()=>( 
-              <News url={this.state.bitcoin} />
+              <News url={this.state.tech} />
           )} />
           <Route path="/apple" component={()=>( 
               <News url={this.state.apple} />
@@ -61,7 +63,7 @@ render() {
               <News url={this.state.busines} />
           )} />
           <Route path="/tech" component={()=>( 
-              <News url={this.state.apple} />
+              <News url={this.state.tech} />
           )} />
           <Redirect to="/tech" />
       </Switch>
